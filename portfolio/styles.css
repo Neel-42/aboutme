@@ -124,22 +124,24 @@ nav a:hover {
   padding: 3.5rem 0 3rem;
 }
 
-.hero-layout {
+/* Name + intro on the left, portrait in the open space on the right */
+.hero-intro-row {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 1.75rem;
+  margin-bottom: 1.75rem;
 }
 
-@media (min-width: 768px) {
-  .hero-layout {
+@media (min-width: 640px) {
+  .hero-intro-row {
     flex-direction: row;
-    align-items: flex-end;
+    align-items: flex-start;
     justify-content: space-between;
-    gap: 2.5rem;
+    gap: 2rem 2.5rem;
   }
 
-  .hero-copy {
+  .hero-intro-copy {
     flex: 1;
     min-width: 0;
   }
@@ -155,11 +157,17 @@ nav a:hover {
   line-height: 0;
 }
 
+@media (min-width: 640px) {
+  .hero-portrait {
+    margin-top: 0.2rem;
+  }
+}
+
 .hero-portrait img {
   display: block;
   width: auto;
-  max-width: min(9.5rem, 28vw);
-  max-height: min(52vh, 28rem);
+  max-width: min(11rem, 32vw);
+  max-height: min(48vh, 26rem);
   height: auto;
   margin-inline: auto;
 }
