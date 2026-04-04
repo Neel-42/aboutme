@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Neel Venkatesan — student at Western Albemarle High School, Charlottesville, Virginia. Projects, experiences, and interests."
+    />
+    <title>Neel Venkatesan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,600;0,8..60,700;1,8..60,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="wrap">
+        <a class="logo" href="#">Neel Venkatesan</a>
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#interests">Interests</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#atlas">Interactive map</a></li>
+            <li><a href="#projects">Projects</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="wrap">
+        <section class="hero" aria-labelledby="hero-heading">
+          <h1 id="hero-heading">Hi, I’m Neel.</h1>
+          <p class="tagline">
+            I’m curious about history, data, and how ideas move across the world—on the map and in real life.
+          </p>
+          <div class="meta">
+            <span><strong>Age</strong> 17</span>
+            <span
+              ><strong>School</strong> Western Albemarle High School, Charlottesville, Virginia</span
+            >
+          </div>
+          <p class="uva-pill" role="note">
+            Big sports fan — especially proud to cheer on UVA athletics.
+          </p>
+        </section>
+
+        <section id="about" aria-labelledby="about-heading">
+          <h2 id="about-heading">About</h2>
+          <p class="lead">
+            I’m a student at Western Albemarle High School in Charlottesville, Virginia. I like building
+            things that help people see patterns—whether in history, on a map, or on the field.
+          </p>
+        </section>
+
+        <section id="interests" aria-labelledby="interests-heading">
+          <h2 id="interests-heading">Interests</h2>
+          <p class="lead">
+            A few topics I care about right now. Edit this list anytime as your interests grow.
+          </p>
+          <div class="interests">
+            <ul>
+              <li>Sports — following games, teams, and strategy</li>
+              <li>History and how food, trade, and culture connect regions</li>
+              <li>Maps, data visualization, and interactive storytelling</li>
+              <li>UVA athletics and college sports</li>
+              <li><em>Room for more—add list items in <code>index.html</code>.</em></li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="experience" aria-labelledby="experience-heading">
+          <h2 id="experience-heading">Experience</h2>
+          <p class="lead">
+            Programs and roles that have shaped how I learn and work with others.
+          </p>
+          <div class="card-grid two">
+            <article class="card">
+              <h3>Youth Teaching Assistant (YTA), Smithsonian</h3>
+              <p>
+                Supported learning alongside Smithsonian educators—helping peers engage with exhibits and
+                activities. (Add a sentence here about what you taught, a favorite gallery, or a skill you
+                built.)
+              </p>
+            </article>
+            <article class="card">
+              <h3>Brown University summer program</h3>
+              <p>
+                Spent part of my summer on Brown’s campus in a pre-college course, exploring new subjects and
+                working with students from across the country. (Add your course name and one takeaway you’re
+                proud of.)
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section id="atlas" aria-labelledby="atlas-heading">
+          <h2 id="atlas-heading">Colonial Food Migration Atlas</h2>
+          <p class="lead">
+            The full interactive map lives below. Choose a migration in the timeline, then explore routes
+            and food flows on the map.
+          </p>
+          <div class="atlas-embed">
+            <p class="note">
+              After you deploy to GitHub Pages (see workflow in this repo), this frame loads the live app.
+              For a local preview, run <code>npm run site:pack</code> then <code>npx serve _site</code>.
+            </p>
+            <div class="atlas-frame-wrap">
+              <iframe
+                title="Colonial Food Migration Atlas — interactive map"
+                src="atlas/index.html"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+              ></iframe>
+            </div>
+            <div class="atlas-actions">
+              <a href="atlas/index.html" target="_blank" rel="noopener noreferrer">Open map in a new tab</a>
+              <a href="https://github.com/YOUR_USERNAME/YOUR_REPO_NAME">View repository on GitHub</a>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects" aria-labelledby="projects-heading">
+          <h2 id="projects-heading">Projects</h2>
+          <p class="lead">Selected work—more to come.</p>
+          <div class="card-grid">
+            <article class="card project-card">
+              <h3>Colonial Food Migration Atlas</h3>
+              <p>
+                An interactive web map built with React, Vite, and Leaflet. It explores how foods moved
+                during the colonial period and makes those migration paths explorable in one place.
+              </p>
+              <div class="links">
+                <a href="atlas/index.html">Open interactive map</a>
+                <a href="https://github.com/YOUR_USERNAME/YOUR_REPO_NAME">Source on GitHub</a>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>
+          © <span id="year"></span> Neel Venkatesan · Charlottesville, Virginia
+        </p>
+        <p>
+          Published with
+          <a href="https://pages.github.com/">GitHub Pages</a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

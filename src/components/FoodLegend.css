@@ -1,0 +1,57 @@
+.food-legend {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  max-width: 200px;
+  font-size: 0.9rem;
+}
+
+.food-legend h4 {
+  margin: 0 0 12px 0;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.legend-items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.legend-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.legend-icon.brought {
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+}
+
+.legend-icon.received {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+}
+
+.legend-hint {
+  margin: 0;
+  color: #666;
+  font-size: 0.8rem;
+  font-style: italic;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 8px;
+}
