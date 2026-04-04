@@ -47,6 +47,10 @@ jobs:
           mkdir -p _site/atlas
           cp -r dist/* _site/atlas/
           cp portfolio/index.html portfolio/styles.css _site/
+          test -f portfolio/images/western-albemarle.jpg
+          test -f portfolio/images/scott-stadium-uva.jpg
+          mkdir -p _site/images
+          cp -R portfolio/images/. _site/images/
 
       - uses: actions/upload-pages-artifact@v3
         with:
