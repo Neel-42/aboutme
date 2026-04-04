@@ -124,6 +124,46 @@ nav a:hover {
   padding: 3.5rem 0 3rem;
 }
 
+.hero-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .hero-layout {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2.5rem;
+  }
+
+  .hero-copy {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+.hero-portrait {
+  flex-shrink: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  background: var(--bg-card);
+  line-height: 0;
+}
+
+.hero-portrait img {
+  display: block;
+  width: auto;
+  max-width: min(9.5rem, 28vw);
+  max-height: min(52vh, 28rem);
+  height: auto;
+  margin-inline: auto;
+}
+
 .hero h1 {
   font-family: var(--font-serif);
   font-size: clamp(2.15rem, 5vw, 2.85rem);
