@@ -166,8 +166,8 @@ nav a:hover {
 .hero-portrait img {
   display: block;
   width: auto;
-  max-width: min(11rem, 32vw);
-  max-height: min(48vh, 26rem);
+  max-width: min(13rem, 38vw);
+  max-height: min(50vh, 28rem);
   height: auto;
   margin-inline: auto;
 }
