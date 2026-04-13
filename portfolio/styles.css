@@ -158,7 +158,19 @@ nav li:first-child a {
 }
 
 .hero-intro-copy .tagline {
-  margin-bottom: 1rem;
+  margin-bottom: 0.85rem;
+}
+
+.hero-bio {
+  margin: 0 0 0.5rem;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 42rem;
+}
+
+.about-meta--hero {
+  margin: 0 0 1.1rem;
 }
 
 .hero-intro-copy .hero-cta {
