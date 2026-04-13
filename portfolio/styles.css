@@ -157,24 +157,22 @@ nav li:first-child a {
   }
 }
 
-.hero-intro-copy .tagline {
-  margin-bottom: 0.85rem;
-}
-
-.hero-bio {
-  margin: 0 0 0.5rem;
-  font-size: 1.02rem;
-  line-height: 1.6;
-  color: var(--muted);
+.hero-intro-copy .hero-text {
+  margin: 0 0 1rem;
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--ink);
   max-width: 42rem;
 }
 
-.about-meta--hero {
-  margin: 0 0 1.1rem;
+.hero-intro-copy .hero-text + .hero-text {
+  margin-top: 0;
 }
 
 .hero-intro-copy .hero-cta {
-  margin-top: 0.15rem;
+  margin-top: 1.15rem;
 }
 
 .hero-portrait {
@@ -203,23 +201,13 @@ nav li:first-child a {
 }
 
 .hero h1 {
-  font-family: var(--font-serif);
-  font-size: clamp(2.15rem, 5vw, 2.85rem);
-  font-weight: 600;
-  letter-spacing: -0.03em;
-  line-height: 1.15;
-  margin: 0 0 0.75rem;
-}
-
-.hero .tagline {
-  font-size: 1.15rem;
-  color: var(--muted);
-  max-width: 36ch;
-  margin: 0 0 1.5rem;
-}
-
-.tagline--wide {
-  max-width: 42rem;
+  font-family: var(--font-sans);
+  font-size: clamp(2rem, 4.5vw, 2.65rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+  color: var(--ink);
 }
 
 .hero-cta {
@@ -367,13 +355,6 @@ nav li:first-child a {
   flex-wrap: wrap;
   gap: 0.5rem 0.65rem;
   align-items: center;
-}
-
-.about-meta {
-  margin: 0;
-  font-size: 0.9rem;
-  color: var(--muted);
-  max-width: 42rem;
 }
 
 .snapshots .photo-grid {
