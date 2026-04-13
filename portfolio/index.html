@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Neel Venkatesan — student at Western Albemarle High School, Charlottesville, Virginia. Projects, experiences, and interests."
+      content="Neel Venkatesan — projects in interactive maps, history, and data. Charlottesville, Virginia."
     />
     <title>Neel Venkatesan</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,11 +24,11 @@
         <a class="logo" href="#">Neel Venkatesan</a>
         <nav aria-label="Primary">
           <ul>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#projects-map">Map</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#interests">Interests</a></li>
             <li><a href="#experience">Experience</a></li>
-            <li><a href="#atlas">Interactive map</a></li>
-            <li><a href="#projects">Projects</a></li>
           </ul>
         </nav>
       </div>
@@ -36,42 +36,85 @@
 
     <main id="main">
       <div class="wrap">
-        <section class="hero" aria-labelledby="hero-heading">
+        <section class="hero hero--compact" aria-labelledby="hero-heading">
           <h1 id="hero-heading">Hi, I’m Neel.</h1>
-          <p class="tagline">
-            I’m curious about history, data, and how ideas move across the world—on the map and in real life.
+          <p class="tagline tagline--wide">
+            I build interactive tools—especially maps—that make history and data easier to explore.
           </p>
-          <div class="meta">
-            <span><strong>Age</strong> 17</span>
-            <span
-              ><strong>School</strong> Western Albemarle High School, Charlottesville, Virginia</span
-            >
+          <p class="hero-cta">
+            <a class="btn btn-primary" href="#projects">See projects</a>
+            <a class="btn btn-ghost" href="#projects-map">Jump to live map</a>
+          </p>
+        </section>
+
+        <section id="projects" class="section-projects" aria-labelledby="projects-heading">
+          <div class="projects-intro">
+            <h2 id="projects-heading">Projects</h2>
+            <p class="lead lead-tight">
+              Selected work: web apps, visualizations, and experiments. More coming soon.
+            </p>
           </div>
-          <p class="uva-pill" role="note">
-            Big sports fan — especially proud to cheer on UVA athletics.
-          </p>
+
+          <article class="project-featured" aria-labelledby="featured-project-title">
+            <header class="project-featured__header">
+              <h3 id="featured-project-title">Colonial Food Migration Atlas</h3>
+              <p class="project-featured__deck">
+                An interactive map of how foods and colonial migration routes connected regions—explore
+                timelines, origins, destinations, and trade flows in one place.
+              </p>
+              <ul class="tech-tags" aria-label="Technologies">
+                <li>React</li>
+                <li>Vite</li>
+                <li>Leaflet</li>
+              </ul>
+              <div class="project-featured__actions">
+                <a class="btn btn-primary" href="atlas/index.html">Open interactive map</a>
+                <a class="btn btn-secondary" href="atlas/index.html" target="_blank" rel="noopener noreferrer"
+                  >New tab</a
+                >
+                <a class="btn btn-link" href="https://github.com/YOUR_USERNAME/YOUR_REPO_NAME">Source on GitHub</a>
+              </div>
+            </header>
+
+            <div id="projects-map" class="atlas-embed atlas-embed--featured">
+              <p class="note note--compact">
+                <strong>Live demo below.</strong> Pick a migration in the sidebar timeline, then explore the map.
+                Local preview: <code>npm run site:pack</code> then <code>npx serve _site</code>.
+              </p>
+              <div class="atlas-frame-wrap">
+                <iframe
+                  title="Colonial Food Migration Atlas — interactive map"
+                  src="atlas/index.html"
+                  loading="lazy"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                ></iframe>
+              </div>
+            </div>
+          </article>
         </section>
 
         <section id="about" aria-labelledby="about-heading">
           <h2 id="about-heading">About</h2>
           <p class="lead">
-            I’m a student at Western Albemarle High School in Charlottesville, Virginia. I like building
-            things that help people see patterns—whether in history, on a map, or on the field.
+            I’m 17 and based near Charlottesville, Virginia. Outside of projects, I follow sports and enjoy
+            connecting what I build to real-world stories and places.
+          </p>
+          <p class="about-meta">
+            Student at Western Albemarle High School · I also follow UVA athletics.
           </p>
         </section>
 
         <section id="interests" aria-labelledby="interests-heading">
           <h2 id="interests-heading">Interests</h2>
           <p class="lead">
-            A few topics I care about right now. Edit this list anytime as your interests grow.
+            Topics I keep coming back to—add or edit list items in <code>index.html</code> anytime.
           </p>
           <div class="interests">
             <ul>
-              <li>Sports — following games, teams, and strategy</li>
-              <li>History and how food, trade, and culture connect regions</li>
+              <li>History, trade, and how food and culture spread</li>
               <li>Maps, data visualization, and interactive storytelling</li>
-              <li>UVA athletics and college sports</li>
-              <li><em>Room for more—add list items in <code>index.html</code>.</em></li>
+              <li>Sports—strategy, teams, and following games</li>
+              <li><em>Room for more interests here.</em></li>
             </ul>
           </div>
         </section>
@@ -97,50 +140,6 @@
                 working with students from across the country. (Add your course name and one takeaway you’re
                 proud of.)
               </p>
-            </article>
-          </div>
-        </section>
-
-        <section id="atlas" aria-labelledby="atlas-heading">
-          <h2 id="atlas-heading">Colonial Food Migration Atlas</h2>
-          <p class="lead">
-            The full interactive map lives below. Choose a migration in the timeline, then explore routes
-            and food flows on the map.
-          </p>
-          <div class="atlas-embed">
-            <p class="note">
-              After you deploy to GitHub Pages (see workflow in this repo), this frame loads the live app.
-              For a local preview, run <code>npm run site:pack</code> then <code>npx serve _site</code>.
-            </p>
-            <div class="atlas-frame-wrap">
-              <iframe
-                title="Colonial Food Migration Atlas — interactive map"
-                src="atlas/index.html"
-                loading="lazy"
-                referrerpolicy="strict-origin-when-cross-origin"
-              ></iframe>
-            </div>
-            <div class="atlas-actions">
-              <a href="atlas/index.html" target="_blank" rel="noopener noreferrer">Open map in a new tab</a>
-              <a href="https://github.com/YOUR_USERNAME/YOUR_REPO_NAME">View repository on GitHub</a>
-            </div>
-          </div>
-        </section>
-
-        <section id="projects" aria-labelledby="projects-heading">
-          <h2 id="projects-heading">Projects</h2>
-          <p class="lead">Selected work—more to come.</p>
-          <div class="card-grid">
-            <article class="card project-card">
-              <h3>Colonial Food Migration Atlas</h3>
-              <p>
-                An interactive web map built with React, Vite, and Leaflet. It explores how foods moved
-                during the colonial period and makes those migration paths explorable in one place.
-              </p>
-              <div class="links">
-                <a href="atlas/index.html">Open interactive map</a>
-                <a href="https://github.com/YOUR_USERNAME/YOUR_REPO_NAME">Source on GitHub</a>
-              </div>
             </article>
           </div>
         </section>

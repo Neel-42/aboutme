@@ -120,8 +120,17 @@ nav a:hover {
   color: var(--accent-orange);
 }
 
+nav li:first-child a {
+  font-weight: 700;
+  color: var(--ink);
+}
+
 .hero {
   padding: 3.5rem 0 3rem;
+}
+
+.hero--compact {
+  padding: 2.75rem 0 2rem;
 }
 
 .hero h1 {
@@ -140,36 +149,162 @@ nav a:hover {
   margin: 0 0 1.5rem;
 }
 
-.hero .meta {
+.tagline--wide {
+  max-width: 42rem;
+}
+
+.hero-cta {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem 1rem;
-  font-size: 0.95rem;
-  color: var(--muted);
+  gap: 0.65rem 0.75rem;
+  margin: 0;
+  align-items: center;
 }
 
-.hero .meta span {
+.btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
+  justify-content: center;
+  padding: 0.55rem 1.15rem;
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
 
-.hero .meta strong {
-  color: var(--ink);
-  font-weight: 600;
+.btn-primary {
+  background: var(--accent-blue);
+  color: #fff;
+  border-color: var(--accent-blue);
 }
 
-.uva-pill {
-  display: inline-block;
-  margin-top: 1.25rem;
-  padding: 0.4rem 0.85rem;
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
+.btn-primary:hover {
+  background: #1a2238;
+  border-color: #1a2238;
+  color: #fff;
+}
+
+.btn-secondary {
+  background: var(--bg-card);
   color: var(--accent-blue);
-  background: linear-gradient(135deg, rgba(35, 45, 75, 0.1), rgba(229, 114, 0, 0.12));
+  border-color: var(--border);
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent-orange);
+  color: var(--accent-orange);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--accent-blue);
+  border-color: var(--border);
+}
+
+.btn-ghost:hover {
+  border-color: var(--accent-orange);
+  color: var(--accent-orange);
+}
+
+.btn-link {
+  background: transparent;
+  color: var(--muted);
+  border-color: transparent;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  padding-left: 0.35rem;
+  padding-right: 0.35rem;
+}
+
+.btn-link:hover {
+  color: var(--accent-orange);
+}
+
+.section-projects {
+  padding: 2rem 0 3rem;
+  margin: 0 calc(-1 * min(1.25rem, 5vw));
+  padding-left: min(1.25rem, 5vw);
+  padding-right: min(1.25rem, 5vw);
+  background: linear-gradient(180deg, rgba(35, 45, 75, 0.06) 0%, transparent 42%);
+  border-radius: 16px;
+}
+
+.projects-intro h2 {
+  font-size: clamp(1.75rem, 4vw, 2.15rem);
+  margin-bottom: 0.5rem;
+}
+
+.lead-tight {
+  margin-bottom: 1.75rem;
+}
+
+.project-featured {
+  background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 999px;
+  border-radius: 16px;
+  box-shadow: 0 8px 40px rgba(26, 31, 46, 0.1);
+  overflow: hidden;
+}
+
+.project-featured__header {
+  padding: 1.75rem 1.75rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.project-featured__header h3 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.35rem, 3vw, 1.65rem);
+  font-weight: 700;
+  margin: 0 0 0.65rem;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+}
+
+.project-featured__deck {
+  margin: 0 0 1rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 52ch;
+}
+
+.tech-tags {
+  list-style: none;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.tech-tags li {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent-blue);
+  background: rgba(35, 45, 75, 0.08);
+  padding: 0.3rem 0.65rem;
+  border-radius: 6px;
+}
+
+.project-featured__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.65rem;
+  align-items: center;
+}
+
+.about-meta {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+  max-width: 42rem;
 }
 
 section {
@@ -243,20 +378,15 @@ section > p.lead {
   margin-bottom: 0;
 }
 
-.project-card {
-  border-left: 4px solid var(--accent-orange);
+.atlas-embed--featured {
+  margin: 0;
+  padding: 1.25rem 1.75rem 1.75rem;
+  background: rgba(247, 245, 240, 0.5);
 }
 
-.project-card .links {
-  margin-top: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem 1.25rem;
-}
-
-.project-card .links a {
-  font-weight: 600;
-  font-size: 0.92rem;
+.note--compact {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
 }
 
 .atlas-embed {
