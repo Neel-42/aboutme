@@ -71,7 +71,7 @@ a:hover {
 }
 
 .site-header {
-  padding: 1.25rem 0;
+  padding: 0.65rem 0;
   border-bottom: 1px solid var(--border);
   background: rgba(247, 245, 240, 0.85);
   backdrop-filter: blur(10px);
@@ -126,20 +126,21 @@ nav li:first-child a {
 }
 
 .hero {
-  padding: 3.5rem 0 3rem;
+  padding: 1.1rem 0 1.75rem;
 }
 
-<<<<<<< HEAD
-.hero--compact {
-  padding: 2.75rem 0 2rem;
-=======
-/* Name + intro on the left, portrait in the open space on the right */
+.hero--lifted {
+  padding-top: 0.35rem;
+  padding-bottom: 1.5rem;
+}
+
+/* Name + intro on the left, portrait on the right */
 .hero-intro-row {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.75rem;
-  margin-bottom: 1.75rem;
+  gap: 1.25rem;
+  margin-bottom: 0;
 }
 
 @media (min-width: 640px) {
@@ -147,13 +148,21 @@ nav li:first-child a {
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 2rem 2.5rem;
+    gap: 1.5rem 2rem;
   }
 
   .hero-intro-copy {
     flex: 1;
     min-width: 0;
   }
+}
+
+.hero-intro-copy .tagline {
+  margin-bottom: 1rem;
+}
+
+.hero-intro-copy .hero-cta {
+  margin-top: 0.15rem;
 }
 
 .hero-portrait {
@@ -168,7 +177,7 @@ nav li:first-child a {
 
 @media (min-width: 640px) {
   .hero-portrait {
-    margin-top: 0.2rem;
+    margin-top: 0;
   }
 }
 
@@ -179,7 +188,6 @@ nav li:first-child a {
   max-height: min(50vh, 28rem);
   height: auto;
   margin-inline: auto;
->>>>>>> b30df34cecdb85ee7d8b7a1d563c7aa114348fa8
 }
 
 .hero h1 {
@@ -484,6 +492,14 @@ section > p.lead {
 
 .interests li:last-child {
   margin-bottom: 0;
+}
+
+.project-card {
+  border-left: 4px solid var(--accent-orange);
+}
+
+.projects-more {
+  margin-top: 1.5rem;
 }
 
 .atlas-embed--featured {

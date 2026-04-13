@@ -29,7 +29,7 @@
 
     <header class="site-header">
       <div class="wrap">
-        <a class="logo" href="#">Neel Venkatesan</a>
+        <a class="logo" href="#" aria-label="Top of page">Neel Venkatesan</a>
         <nav aria-label="Primary">
           <ul>
             <li><a href="#projects">Projects</a></li>
@@ -45,32 +45,16 @@
 
     <main id="main">
       <div class="wrap">
-<<<<<<< HEAD
-        <section class="hero hero--compact" aria-labelledby="hero-heading">
-          <h1 id="hero-heading">Hi, I’m Neel.</h1>
-          <p class="tagline tagline--wide">
-            I build interactive tools—especially maps—that make history and data easier to explore.
-          </p>
-          <p class="hero-cta">
-            <a class="btn btn-primary" href="#projects">See projects</a>
-            <a class="btn btn-ghost" href="#projects-map">Jump to live map</a>
-          </p>
-        </section>
-
-        <section id="projects" class="section-projects" aria-labelledby="projects-heading">
-          <div class="projects-intro">
-            <h2 id="projects-heading">Projects</h2>
-            <p class="lead lead-tight">
-              Selected work: web apps, visualizations, and experiments. More coming soon.
-            </p>
-=======
-        <section class="hero" aria-labelledby="hero-heading">
+        <section class="hero hero--lifted" aria-labelledby="hero-heading">
           <div class="hero-intro-row">
             <div class="hero-intro-copy">
               <h1 id="hero-heading">Hi, I’m Neel.</h1>
-              <p class="tagline">
-                I’m curious about history, data, and how ideas move across the world—on the map and in real
-                life.
+              <p class="tagline tagline--wide">
+                I build interactive tools—especially maps—that make history and data easier to explore.
+              </p>
+              <p class="hero-cta">
+                <a class="btn btn-primary" href="#projects">See projects</a>
+                <a class="btn btn-ghost" href="#projects-map">Jump to live map</a>
               </p>
             </div>
             <div class="hero-portrait">
@@ -84,12 +68,14 @@
               />
             </div>
           </div>
-          <div class="meta">
-            <span><strong>Age</strong> 17</span>
-            <span
-              ><strong>School</strong> Western Albemarle High School, Charlottesville, Virginia</span
-            >
->>>>>>> b30df34cecdb85ee7d8b7a1d563c7aa114348fa8
+        </section>
+
+        <section id="projects" class="section-projects" aria-labelledby="projects-heading">
+          <div class="projects-intro">
+            <h2 id="projects-heading">Projects</h2>
+            <p class="lead lead-tight">
+              Selected work: web apps, visualizations, and experiments. More coming soon.
+            </p>
           </div>
 
           <article class="project-featured" aria-labelledby="featured-project-title">
@@ -105,21 +91,25 @@
                 <li>Leaflet</li>
               </ul>
               <div class="project-featured__actions">
-                <a class="btn btn-primary" href="atlas/index.html">Open interactive map</a>
-                <a class="btn btn-secondary" href="atlas/index.html" target="_blank" rel="noopener noreferrer"
+                <a class="btn btn-primary atlas-dynamic-link" href="atlas/index.html">Open interactive map</a>
+                <a
+                  class="btn btn-secondary atlas-dynamic-link"
+                  href="atlas/index.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   >New tab</a
                 >
-                <a class="btn btn-link" href="https://github.com/YOUR_USERNAME/YOUR_REPO_NAME">Source on GitHub</a>
+                <a class="btn btn-link" href="https://github.com/neel-42/aboutme">Source on GitHub</a>
               </div>
             </header>
 
             <div id="projects-map" class="atlas-embed atlas-embed--featured">
               <p class="note note--compact">
                 <strong>Live demo below.</strong> Pick a migration in the sidebar timeline, then explore the map.
-                Local preview: <code>npm run site:pack</code> then <code>npx serve _site</code>.
               </p>
               <div class="atlas-frame-wrap">
                 <iframe
+                  id="atlas-embed-frame"
                   title="Colonial Food Migration Atlas — interactive map"
                   src="atlas/index.html"
                   loading="lazy"
@@ -128,6 +118,16 @@
               </div>
             </div>
           </article>
+
+          <div class="projects-more card-grid two">
+            <article class="card project-card">
+              <h3>Indian Street Food Club · WAHS</h3>
+              <p>
+                I started the Indian Street Food club at my school. We educate people on authentic Indian
+                culture through food and have shared Indian street food at WAHS for the past two years.
+              </p>
+            </article>
+          </div>
         </section>
 
         <section id="about" aria-labelledby="about-heading">
@@ -207,23 +207,15 @@
 
         <section id="interests" aria-labelledby="interests-heading">
           <h2 id="interests-heading">Interests</h2>
-<<<<<<< HEAD
           <p class="lead">
             Topics I keep coming back to—add or edit list items in <code>index.html</code> anytime.
           </p>
-=======
-          <p class="lead">A few topics I keep coming back to.</p>
->>>>>>> b30df34cecdb85ee7d8b7a1d563c7aa114348fa8
           <div class="interests">
             <ul>
               <li>History, trade, and how food and culture spread</li>
               <li>Maps, data visualization, and interactive storytelling</li>
-<<<<<<< HEAD
               <li>Sports—strategy, teams, and following games</li>
               <li><em>Room for more interests here.</em></li>
-=======
-              <li>UVA athletics and college sports</li>
->>>>>>> b30df34cecdb85ee7d8b7a1d563c7aa114348fa8
             </ul>
           </div>
         </section>
@@ -251,70 +243,6 @@
             </article>
           </div>
         </section>
-<<<<<<< HEAD
-=======
-
-        <section id="atlas" aria-labelledby="atlas-heading">
-          <h2 id="atlas-heading">Colonial Food Migration Atlas</h2>
-          <p class="lead">
-            The full interactive map lives below. Choose a migration in the timeline, then explore routes
-            and food flows on the map.
-          </p>
-          <div class="atlas-embed">
-            <p class="note">
-              On the live GitHub Pages site, the map is served from the same deployment. When you open this
-              page from your computer (for example with Python’s <code>http.server</code>), the map loads the
-              published version on GitHub Pages instead—no <code>npm</code> install required (internet
-              required).
-            </p>
-            <div class="atlas-frame-wrap">
-              <iframe
-                id="atlas-embed-frame"
-                title="Colonial Food Migration Atlas — interactive map"
-                src="atlas/index.html"
-                loading="lazy"
-                referrerpolicy="strict-origin-when-cross-origin"
-              ></iframe>
-            </div>
-            <div class="atlas-actions">
-              <a
-                class="atlas-dynamic-link"
-                href="atlas/index.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Open map in a new tab</a
-              >
-              <a href="https://github.com/neel-42/aboutme">View repository on GitHub</a>
-            </div>
-          </div>
-        </section>
-
-        <section id="projects" aria-labelledby="projects-heading">
-          <h2 id="projects-heading">Projects</h2>
-          <p class="lead">Selected work—more to come.</p>
-          <div class="card-grid two">
-            <article class="card project-card">
-              <h3>Colonial Food Migration Atlas</h3>
-              <p>
-                An interactive web map built with React, Vite, and Leaflet. It explores how foods moved
-                during the colonial period and makes those migration paths explorable in one place.
-              </p>
-              <div class="links">
-                <a class="atlas-dynamic-link" href="atlas/index.html">Open interactive map</a>
-                <a href="https://github.com/neel-42/aboutme">Source on GitHub</a>
-              </div>
-            </article>
-            <article class="card project-card">
-              <h3>Indian Street Food Club · WAHS</h3>
-              <p>
-                I started the Indian Street Food club at my school. In the Indian Street Food club, we strive
-                to educate people on authentic Indian culture through food. We have been able to use this
-                club to spread Indian food through WAHS for the past 2 years.
-              </p>
-            </article>
-          </div>
-        </section>
->>>>>>> b30df34cecdb85ee7d8b7a1d563c7aa114348fa8
       </div>
     </main>
 
