@@ -129,8 +129,57 @@ nav li:first-child a {
   padding: 3.5rem 0 3rem;
 }
 
+<<<<<<< HEAD
 .hero--compact {
   padding: 2.75rem 0 2rem;
+=======
+/* Name + intro on the left, portrait in the open space on the right */
+.hero-intro-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75rem;
+  margin-bottom: 1.75rem;
+}
+
+@media (min-width: 640px) {
+  .hero-intro-row {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem 2.5rem;
+  }
+
+  .hero-intro-copy {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+.hero-portrait {
+  flex-shrink: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  background: var(--bg-card);
+  line-height: 0;
+}
+
+@media (min-width: 640px) {
+  .hero-portrait {
+    margin-top: 0.2rem;
+  }
+}
+
+.hero-portrait img {
+  display: block;
+  width: auto;
+  max-width: min(13rem, 38vw);
+  max-height: min(50vh, 28rem);
+  height: auto;
+  margin-inline: auto;
+>>>>>>> b30df34cecdb85ee7d8b7a1d563c7aa114348fa8
 }
 
 .hero h1 {
@@ -305,6 +354,65 @@ nav li:first-child a {
   font-size: 0.9rem;
   color: var(--muted);
   max-width: 42rem;
+}
+
+.snapshots .photo-grid {
+  display: grid;
+  gap: 1.75rem;
+  justify-items: center;
+}
+
+@media (min-width: 700px) {
+  .snapshots .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: stretch;
+  }
+}
+
+.snapshots .photo-card {
+  margin: 0;
+  max-width: 22rem;
+  width: 100%;
+}
+
+.snapshots .photo-frame {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  background: var(--bg-card);
+}
+
+.snapshots .photo-frame img {
+  display: block;
+  width: 100%;
+  max-width: 20rem;
+  height: auto;
+  margin-inline: auto;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+}
+
+.snapshots .photo-card figcaption {
+  margin-top: 0.85rem;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.snapshots .photo-card figcaption strong {
+  display: block;
+  color: var(--ink);
+  margin-bottom: 0.25rem;
+}
+
+.snapshots .photo-caption {
+  display: block;
+}
+
+.snapshots .photo-credit {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.82rem;
 }
 
 section {
